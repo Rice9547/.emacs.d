@@ -38,6 +38,7 @@
 (setq show-paren-style 'parentheses)
 
 (add-to-list 'load-path "~/.emacs.d/emmet-mode")
+(add-to-list 'load-path "~/.emacs.d/html-mode")
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
@@ -53,7 +54,6 @@
 (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
-
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -77,7 +77,8 @@
   eval-after-load "color-theme"
     '(progn
 	   (color-theme-initialize)
-	   (color-theme-pok-wob)
+	   (color-theme-ld-dark)
 	 )
 )
 (put 'erase-buffer 'disabled nil)
+
